@@ -15,20 +15,20 @@ const Dashboard = () => {
   const recordsPerPage = 10;
 
   useEffect(() => {
-    Papa.parse('/Electric_Vehicle_Population_Data.csv', {
-      download: true,
-      header: true,
-      complete: (results) => {
-        console.log("CSV Data:", results.data);
-        setRecords(results.data);
-        setLoading(false);
-      },
-      error: (error) => {
-        console.error("Error fetching CSV:", error);
-        alert("Failed to load CSV data. Please check the console for more details.");
-        setLoading(false);
-      }
-    });
+    Papa.parse(`${process.env.PUBLIC_URL}/Electric_Vehicle_Population_Data.csv`, {
+        download: true,
+        header: true,
+        complete: (results) => {
+          console.log("CSV Data:", results.data);
+          setRecords(results.data);
+          setLoading(false);
+        },
+        error: (error) => {
+          console.error("Error fetching CSV:", error);
+          alert("Failed to load CSV data. Please check the console for more details.");
+          setLoading(false);
+        }
+      });      
   }, []);
   
   if (loading) return <div>Loading...</div>;
