@@ -1,0 +1,16 @@
+.dashboard {padding: 20px;font-family: Arial, sans-serif;}
+h1 {text-align: center;}
+.key-metrics {display: flex;justify-content: space-between;margin-bottom: 20px;font-size: 1.2em;}
+.charts {display: flex;justify-content: space-around;flex-wrap: wrap;margin-bottom: 20px;}
+.chart {flex: 1;min-width: 300px;margin: 10px;padding: 10px;border: 1px solid #ccc;border-radius: 8px;box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);}
+.table-container {overflow-x: auto;margin-top: 20px;}
+.table {width: 100%;min-width: 800px;border-collapse: collapse;table-layout: auto;}
+th, td {border: 1px solid #ddd;padding: 8px;text-align: left;}
+th {background-color: #f8f9fa;position: sticky;top: 0;z-index: 1;}
+tr:hover {background-color: #f1f1f1;}
+.pagination {display: flex;justify-content: center;margin-top: 20px;}
+.page-item {margin: 0 5px;}
+.page-link {padding: 8px 12px;border: 1px solid #007bff;border-radius: 5px;color: #007bff;text-decoration: none;}
+.page-link:hover {background-color: #007bff;color: white;}
+.active .page-link {background-color: #007bff;color: white;}
+  
